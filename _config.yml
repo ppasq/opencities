@@ -27,6 +27,7 @@ permalink: pretty
 navigationLinks:
  - {permalink: "/", text: "Home"}
  - {permalink: "/about/", text: "About"}
+ - {permalink: "#footer", text: "Partners"}
  - {permalink: "/resources/", text: "Resources"}
 
 cityLinks:
@@ -41,3 +42,6 @@ cityLinks:
   - {permalink: "/saint-louis/", text: "Saint-Louis"}
   - {permalink: "/seychelles/", text: "Seychelles"}
   - {permalink: "/zanzibar-city/", text: "Zanzibar City"}
+
+collections:
+  - external_feed

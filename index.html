@@ -27,17 +27,14 @@ layout: landing
 					<section id="two" class="wrapper alt style2">
 						<!-- Map -->
 						<section class="spotlight">
-							<div class="image"
-								style="background: url(/images/1000x600@2x.jpg) no-repeat; background-size: cover;">
-								<img src="/images/oca-overview.png">
-							</div>
+							<div id="map"></div>
 							<div class="content">
 								<h2>Participating Cities</h2>
 								<ul>
 									<li><a href="/accra/">Accra, Ghana</a></li>
 									<li><a href="/antananarivo/">Antananarivo, Madagascar</a></li>
 									<li><a href="/brazzaville/">Brazzaville, ROC</a></li>
-									<li><a href="/kampala/">Kampala, Uganda</a></li>
+									<li><a href="/uganda/kampala/">Kampala, Uganda</a></li>
 									<li><a href="/kinshasa/">Kinshasa, DRC</a></li>
 									<li><a href="/monrovia/">Monrovia, Liberia</a></li>
 									<li><a href="/ngaoundere/">Ngaoundéré, Cameroon</a></li>
@@ -51,16 +48,26 @@ layout: landing
 
 						<section class="spotlight">
 							<div class="image">
-							  <img src="images/collaborative.jpg" alt="" />
+							  <img src="images/collaborative2.jpg" alt="" />
 							</div>
 							<div class="content">
 								<h2>A Collaborative Approach</h2>
 								<p>Data collected through Open Cities Africa will use the OpenStreetMap platform and a collaborative approach that will provide technical and institutional advantages.
-								<br><small>Photos: Daniel Joseph / © American Red Cross</small></p>
+								<br><small>Photos: © iLab Liberia (left), © Immergis (right)</small></p>
 								<p><a href="/about/" class="button">Learn More</a></p>
 							</div>
 						</section>
 
+					</section>
+
+					<section id="feed" class="wrapper style2">
+						<div class="inner">
+							{% for e in site.external_feed %}
+								<h3><a href="{{ e.link }}">{{ e.title }}</a></h3>
+								<p>by {{ e.author }} on {{ e.published | date_to_long_string }}<br/>
+								{{ e.summary }}</p>
+							{% endfor %}
+						</div>
 					</section>
 
 					<section id="cta" class="wrapper style4">
